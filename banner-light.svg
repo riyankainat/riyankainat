@@ -1,0 +1,257 @@
+<svg width="100%" viewBox="0 0 1280 640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" font-family="Inter, 'Segoe UI', Arial, sans-serif">
+<defs>
+
+  <style>
+    .mono { font-family: 'SFMono-Regular', Consolas, 'Courier New', monospace; }
+    .fade {
+      animation: fade 1.4s cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes fade {
+      0%   { opacity: 0; transform: translateY(10px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .pill {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: pillIn 1s cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes pillIn {
+      0%   { opacity: 0; transform: translateY(6px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    .breathe { animation: breathe 6s ease-in-out infinite; }
+    @keyframes breathe {
+      0%, 100% { opacity: 0.45; }
+      50%      { opacity: 0.85; }
+    }
+    .drift { animation: drift 16s ease-in-out infinite; }
+    @keyframes drift {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50%      { transform: translate(22px, -16px) scale(1.06); }
+    }
+    .drift2 { animation: drift2 20s ease-in-out infinite; }
+    @keyframes drift2 {
+      0%, 100% { transform: translate(0px, 0px) scale(1); }
+      50%      { transform: translate(-18px, 14px) scale(1.04); }
+    }
+    .hover { animation: hover 7s ease-in-out infinite; }
+    @keyframes hover {
+      0%, 100% { transform: translateY(0px); }
+      50%      { transform: translateY(-8px); }
+    }
+  </style>
+
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#FFFFFF"/>
+    <stop offset="50%" stop-color="#F6F8FA"/>
+    <stop offset="100%" stop-color="#FFFFFF"/>
+  </linearGradient>
+
+  <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#1F6FEB"/>
+    <stop offset="55%" stop-color="#0969DA"/>
+    <stop offset="100%" stop-color="#0EA5E9"/>
+    <animate attributeName="x1" values="0%;40%;0%" dur="12s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="100%;140%;100%" dur="12s" repeatCount="indefinite"/>
+  </linearGradient>
+
+  <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0.55"/>
+  </linearGradient>
+
+  <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#1F6FEB"/>
+    <stop offset="100%" stop-color="#0EA5E9"/>
+  </linearGradient>
+
+  <radialGradient id="blobA" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#1F6FEB" stop-opacity="0.10"/>
+    <stop offset="100%" stop-color="#1F6FEB" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="blobB" cx="50%" cy="50%" r="50%">
+    <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.08"/>
+    <stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/>
+  </radialGradient>
+
+  <radialGradient id="haloGrad" cx="50%" cy="50%" r="50%">
+    <stop offset="60%" stop-color="#1F6FEB" stop-opacity="0"/>
+    <stop offset="85%" stop-color="#1F6FEB" stop-opacity="0.14"/>
+    <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
+  </radialGradient>
+
+  <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#0EA5E9" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#0EA5E9" stop-opacity="0.30"/>
+    <stop offset="100%" stop-color="#0EA5E9" stop-opacity="0"/>
+  </linearGradient>
+
+  <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="55"/>
+  </filter>
+
+  <filter id="textGlow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="2.4" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <filter id="ringGlow" x="-60%" y="-60%" width="220%" height="220%">
+    <feGaussianBlur stdDeviation="3" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <clipPath id="canvasClip">
+    <rect x="0" y="0" width="1280" height="640" rx="24"/>
+  </clipPath>
+
+  <clipPath id="profileCircleClip">
+    <circle cx="988" cy="290" r="118"/>
+  </clipPath>
+
+  <pattern id="gridPattern" width="52" height="52" patternUnits="userSpaceOnUse">
+    <path d="M52 0 H0 V52" fill="none" stroke="#57606A" stroke-opacity="0.05" stroke-width="1"/>
+  </pattern>
+
+  <mask id="revealMask">
+    <rect x="870" y="172" width="236" height="236" fill="#fff">
+      <animate attributeName="height" values="0;236" dur="1.8s" begin="0.3s" fill="freeze" calcMode="spline" keySplines="0.2 0.8 0.2 1"/>
+    </rect>
+  </mask>
+
+</defs>
+
+<g clip-path="url(#canvasClip)">
+
+  <rect x="0" y="0" width="1280" height="640" fill="url(#bgGrad)"/>
+  <rect x="0" y="0" width="1280" height="640" fill="url(#gridPattern)"/>
+
+  <circle class="drift" cx="160" cy="110" r="220" fill="url(#blobA)" filter="url(#softBlur)"/>
+  <circle class="drift2" cx="1140" cy="540" r="260" fill="url(#blobB)" filter="url(#softBlur)"/>
+
+  <g fill="#1F6FEB">
+    <circle cx="150" cy="520" r="1.6" class="breathe" style="animation-delay:0s"><animate attributeName="cy" values="520;498;520" dur="11s" repeatCount="indefinite"/></circle>
+    <circle cx="700" cy="60" r="1.6" class="breathe" style="animation-delay:1.5s"><animate attributeName="cy" values="60;82;60" dur="13s" repeatCount="indefinite"/></circle>
+    <circle cx="1210" cy="230" r="1.6" class="breathe" style="animation-delay:3s"><animate attributeName="cy" values="230;255;230" dur="12s" repeatCount="indefinite"/></circle>
+    <circle cx="640" cy="600" r="1.4" class="breathe" style="animation-delay:2s"><animate attributeName="cy" values="600;580;600" dur="14s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Terminal -->
+  <g class="fade" style="animation-delay:0.05s">
+    <rect x="68" y="86" width="536" height="428" rx="20" fill="#F6F8FA" fill-opacity="0.9" stroke="#D0D7DE" stroke-width="1"/>
+    <rect x="68" y="86" width="536" height="428" rx="20" fill="none" stroke="#0969DA" stroke-opacity="0.12" stroke-width="1"/>
+
+    <rect x="68" y="86" width="536" height="38" rx="19" fill="#EAEEF2" fill-opacity="0.9"/>
+    <circle cx="90" cy="105" r="4.6" fill="#AFB8C1"/>
+    <circle cx="106" cy="105" r="4.6" fill="#AFB8C1"/>
+    <circle cx="122" cy="105" r="4.6" fill="#AFB8C1"/>
+    <text x="352" y="110" text-anchor="middle" class="mono" font-size="11.5" fill="#57606A" letter-spacing="0.3">riyankainat — zsh</text>
+
+    <g class="mono" font-size="14.5">
+      <text x="92" y="155" fill="#0969DA">user@riyankainat<tspan fill="#8C959F">:~$</tspan></text>
+
+      <g>
+        <clipPath id="typeClip1">
+          <rect x="92" y="168" width="0" height="20">
+            <animate attributeName="width" values="0;150" dur="1.6s" begin="0.5s" fill="freeze" calcMode="spline" keySplines="0.3 0 0.2 1"/>
+          </rect>
+        </clipPath>
+        <text x="92" y="183" fill="#24292F" clip-path="url(#typeClip1)">cat README.md</text>
+        <rect x="92" y="168" width="6" height="18" fill="#0969DA">
+          <animate attributeName="opacity" values="1;1;0;0" dur="1s" repeatCount="indefinite"/>
+          <animate attributeName="x" values="94;236" dur="1.6s" begin="0.5s" fill="freeze"/>
+        </rect>
+      </g>
+    </g>
+
+    <g class="fade" style="animation-delay:2.1s">
+      <text x="92" y="242" font-size="15" letter-spacing="2.5" fill="#57606A" font-weight="500">HI, I&#8217;M</text>
+    </g>
+
+    <g filter="url(#textGlow)" font-size="44" font-weight="700" fill="url(#nameGrad)">
+      <text x="92" y="298" class="fade" style="animation-delay:2.35s">Riyan Kainat</text>
+    </g>
+
+    <g class="mono fade" style="animation-delay:2.85s" font-size="18" fill="#57606A" letter-spacing="0.3">
+      <text x="92" y="332">Full Stack Developer</text>
+    </g>
+
+    <g font-size="12.5" font-weight="500" fill="#24292F">
+      <g class="pill" style="animation-delay:3.2s">
+        <rect x="92" y="356" width="70" height="30" rx="15" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="1"/>
+        <text x="127" y="376" text-anchor="middle">React</text>
+      </g>
+      <g class="pill" style="animation-delay:3.35s">
+        <rect x="170" y="356" width="82" height="30" rx="15" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="1"/>
+        <text x="211" y="376" text-anchor="middle">Node.js</text>
+      </g>
+      <g class="pill" style="animation-delay:3.5s">
+        <rect x="260" y="356" width="94" height="30" rx="15" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="1"/>
+        <text x="307" y="376" text-anchor="middle">MongoDB</text>
+      </g>
+      <g class="pill" style="animation-delay:3.65s">
+        <rect x="362" y="356" width="66" height="30" rx="15" fill="#FFFFFF" stroke="#D0D7DE" stroke-width="1"/>
+        <text x="395" y="376" text-anchor="middle">Java</text>
+      </g>
+    </g>
+
+    <g class="fade" style="animation-delay:3.9s" font-size="13.5" fill="#57606A">
+      <text x="92" y="424">Passionate about building scalable web applications —</text>
+      <text x="92" y="444">always learning, always building.</text>
+    </g>
+
+    <g class="fade" style="animation-delay:4.1s" font-size="11.5" fill="#8C959F" letter-spacing="0.4">
+      <text x="92" y="486">TASKFLOW</text>
+      <text x="200" y="486">LEARNHUB</text>
+      <text x="312" y="486">PCSTIANS</text>
+    </g>
+  </g>
+
+  <!-- Profile -->
+  <g class="hover">
+    <circle cx="988" cy="290" r="150" fill="url(#haloGrad)" class="breathe"/>
+
+    <circle cx="988" cy="290" r="122" fill="#F6F8FA" fill-opacity="0.7"/>
+    <circle cx="988" cy="290" r="122" fill="none" stroke="url(#ringGrad)" stroke-width="2" filter="url(#ringGlow)"/>
+    <circle cx="988" cy="290" r="112" fill="none" stroke="#24292F" stroke-opacity="0.06" stroke-width="1"/>
+
+    <g mask="url(#revealMask)">
+      <g clip-path="url(#profileCircleClip)">
+        <rect x="870" y="172" width="236" height="236" fill="#F6F8FA"/>
+        <image href="assets/profile.png" x="870" y="172" width="236" height="236" preserveAspectRatio="xMidYMid slice"/>
+        <rect x="870" y="172" width="236" height="46" fill="url(#scanGrad)">
+          <animate attributeName="y" values="172;362;172" dur="7s" begin="2.5s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <circle cx="988" cy="290" r="118" fill="none" stroke="#0969DA" stroke-opacity="0.25" stroke-width="1"/>
+  </g>
+
+  <g class="fade" style="animation-delay:1s">
+    <text x="988" y="444" text-anchor="middle" font-size="17" font-weight="600" fill="#24292F">Riyan Kainat</text>
+    <text x="988" y="465" text-anchor="middle" font-size="12" fill="#57606A" class="mono" letter-spacing="0.3">github.com/riyankainat</text>
+  </g>
+
+  <line x1="860" y1="510" x2="1116" y2="510" stroke="#D0D7DE" stroke-width="1"/>
+
+  <g class="fade" style="animation-delay:1.2s" font-size="11" fill="#57606A" letter-spacing="0.4">
+    <text x="988" y="536" text-anchor="middle" class="mono">riyankainat@gmail.com</text>
+  </g>
+
+  <!-- Bottom -->
+  <g class="fade" style="animation-delay:0.6s">
+    <text x="640" y="592" text-anchor="middle" font-size="10.5" letter-spacing="2.6" fill="#57606A" font-weight="500">KEEP LEARNING · KEEP BUILDING · KEEP GROWING</text>
+    <rect x="490" y="606" width="300" height="3" rx="1.5" fill="#D0D7DE"/>
+    <rect x="490" y="606" width="0" height="3" rx="1.5" fill="url(#barGrad)">
+      <animate attributeName="width" values="0;300;0" keyTimes="0;0.5;1" dur="9s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0.4 0 0.2 1"/>
+    </rect>
+  </g>
+
+</g>
+</svg>
