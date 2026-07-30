@@ -223,7 +223,7 @@
     <g mask="url(#revealMask)">
       <g clip-path="url(#profileCircleClip)">
         <rect x="870" y="172" width="236" height="236" fill="#0D1117"/>
-        <image href="assets/profile.png" x="870" y="172" width="236" height="236" preserveAspectRatio="xMidYMid slice"/>
+        <image href="href="https://raw.githubusercontent.com/riyankainat/riyankainat/main/assets/profile.png"" x="870" y="172" width="236" height="236" preserveAspectRatio="xMidYMid slice"/>
         <rect x="870" y="172" width="236" height="46" fill="url(#scanGrad)">
           <animate attributeName="y" values="172;362;172" dur="7s" begin="2.5s" repeatCount="indefinite"/>
         </rect>
