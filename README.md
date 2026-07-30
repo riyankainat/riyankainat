@@ -14,15 +14,35 @@ I'm a Full Stack Developer who enjoys turning ideas into fast, reliable, and wel
 
 <br>
 
-<h1 align="center">Tech Stack</h1>
+
+## 💻 Frontend
 
 <p align="center">
-<img src="https://skillicons.dev/icons?i=html,css,js,react,redux,tailwind,nodejs,express,mongodb,mysql,java,python,git,github,postman,vscode&theme=light" />
+<img src="https://skillicons.dev/icons?i=html,css,js,react,redux,tailwind,vite" />
 </p>
+
+## ⚙️ Backend
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=nodejs,express,mongodb,mysql" />
+</p>
+
+## ☕ Languages
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=java,python" />
+</p>
+
+## 🛠 Tools
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=git,github,postman,vscode" />
+</p>
+
 
 <br>
 
-<h1 align="center">Featured Projects</h1>
+
 
 <p align="center">
 
@@ -40,18 +60,7 @@ I'm a Full Stack Developer who enjoys turning ideas into fast, reliable, and wel
 
 <br>
 
-<h1 align="center">GitHub Stats</h1>
 
-<p align="center">
-<img src="https://github-readme-stats.vercel.app/api?username=riyankainat&show_icons=true&theme=default&hide_border=true&count_private=true" width="48%" />
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=riyankainat&layout=compact&theme=default&hide_border=true" width="38%" />
-</p>
-
-<p align="center">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=riyankainat&theme=default&hide_border=true" width="60%" />
-</p>
-
-<br>
 
 <h1 align="center">Activity Graph</h1>
 
@@ -61,13 +70,7 @@ I'm a Full Stack Developer who enjoys turning ideas into fast, reliable, and wel
 
 <br>
 
-<h1 align="center">GitHub Trophies</h1>
 
-<p align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=riyankainat&theme=flat&no-frame=true&column=7&margin-w=8&margin-h=8" />
-</p>
-
-<br>
 
 <h1 align="center">Connect With Me</h1>
 
